@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>TestTest</h1>
+            
+            <% for (let i = 0; i < data.length; i++) { %>
+                <div class="item">
+                    <h2><%= data[i].title %></h2>
+                    <p><%= data[i].description %></p>
+                    <img class="image" src="<%= data[i].imageUrl %>" alt="<%= data[i].title %>"/>
+                    <button class="button" onclick="window.location.href='<%= data[i].buttonUrl %>'">Read Closer</button>
+                </div>
+            <% } %>
+        </div>
+    
+    </body>
+  </html>
